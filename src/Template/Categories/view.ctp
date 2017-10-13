@@ -43,10 +43,6 @@
             <td><?= $this->Number->format($category->rght) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Category Id') ?></th>
-            <td><?= $this->Number->format($category->category_id) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Created') ?></th>
             <td><?= h($category->created) ?></td>
         </tr>
@@ -65,7 +61,6 @@
                 <th scope="col"><?= __('Lft') ?></th>
                 <th scope="col"><?= __('Rght') ?></th>
                 <th scope="col"><?= __('Name') ?></th>
-                <th scope="col"><?= __('Category Id') ?></th>
                 <th scope="col"><?= __('Description') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
@@ -78,7 +73,6 @@
                 <td><?= h($categories->lft) ?></td>
                 <td><?= h($categories->rght) ?></td>
                 <td><?= h($categories->name) ?></td>
-                <td><?= h($categories->category_id) ?></td>
                 <td><?= h($categories->description) ?></td>
                 <td><?= h($categories->created) ?></td>
                 <td><?= h($categories->modified) ?></td>
@@ -102,7 +96,6 @@
                 <th scope="col"><?= __('Lft') ?></th>
                 <th scope="col"><?= __('Rght') ?></th>
                 <th scope="col"><?= __('Name') ?></th>
-                <th scope="col"><?= __('Category Id') ?></th>
                 <th scope="col"><?= __('Description') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
@@ -115,7 +108,6 @@
                 <td><?= h($childCategories->lft) ?></td>
                 <td><?= h($childCategories->rght) ?></td>
                 <td><?= h($childCategories->name) ?></td>
-                <td><?= h($childCategories->category_id) ?></td>
                 <td><?= h($childCategories->description) ?></td>
                 <td><?= h($childCategories->created) ?></td>
                 <td><?= h($childCategories->modified) ?></td>

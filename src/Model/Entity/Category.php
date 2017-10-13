@@ -11,14 +11,13 @@ use Cake\ORM\Entity;
  * @property int $lft
  * @property int $rght
  * @property string $name
- * @property int $category_id
  * @property string $description
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \App\Model\Entity\ParentCategory $parent_category
+ * @property \App\Model\Entity\Category $parent_category
  * @property \App\Model\Entity\Category[] $categories
- * @property \App\Model\Entity\ChildCategory[] $child_categories
+ * @property \App\Model\Entity\Category[] $child_categories
  */
 class Category extends Entity
 {

@@ -22,7 +22,6 @@ class CategoriesFixture extends TestFixture
         'lft' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'rght' => ['type' => 'integer', 'length' => 10, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'name' => ['type' => 'string', 'length' => 100, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'category_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'description' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
@@ -48,10 +47,9 @@ class CategoriesFixture extends TestFixture
             'lft' => 1,
             'rght' => 1,
             'name' => 'Lorem ipsum dolor sit amet',
-            'category_id' => 1,
             'description' => 'Lorem ipsum dolor sit amet',
-            'created' => '2017-09-29 14:00:08',
-            'modified' => '2017-09-29 14:00:08'
+            'created' => '2017-10-06 13:23:57',
+            'modified' => '2017-10-06 13:23:57'
         ],
     ];
 }

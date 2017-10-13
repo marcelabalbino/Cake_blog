@@ -10,9 +10,8 @@ use Cake\Validation\Validator;
  * Categories Model
  *
  * @property \App\Model\Table\CategoriesTable|\Cake\ORM\Association\BelongsTo $ParentCategories
- * @property \App\Model\Table\CategoriesTable|\Cake\ORM\Association\BelongsTo $Categories
+ * @property |\Cake\ORM\Association\HasMany $Articles
  * @property \App\Model\Table\CategoriesTable|\Cake\ORM\Association\HasMany $ChildCategories
- * @property \App\Model\Table\CategoriesTable|\Cake\ORM\Association\HasMany $Categories
  *
  * @method \App\Model\Entity\Category get($primaryKey, $options = [])
  * @method \App\Model\Entity\Category newEntity($data = null, array $options = [])
@@ -49,15 +48,12 @@ class CategoriesTable extends Table
             'className' => 'Categories',
             'foreignKey' => 'parent_id'
         ]);
-        $this->belongsTo('Categories', [
+        $this->hasMany('Articles', [
             'foreignKey' => 'category_id'
         ]);
         $this->hasMany('ChildCategories', [
             'className' => 'Categories',
             'foreignKey' => 'parent_id'
-        ]);
-        $this->hasMany('Categories', [
-            'foreignKey' => 'category_id'
         ]);
     }
 
@@ -96,7 +92,6 @@ class CategoriesTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['parent_id'], 'ParentCategories'));
-        $rules->add($rules->existsIn(['category_id'], 'Categories'));
 
         return $rules;
     }
